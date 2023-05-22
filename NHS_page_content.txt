@@ -1,0 +1,25 @@
+ <p class="project-details__desc-para">
+                Project has been engaged by the National Health Services (NHS) in England to address the issue of missed general practitioner (GP) appointments,
+                which incur significant costs for the healthcare system. The objective is to gain a better understanding of the reasons behind missed appointments 
+                and develop data-informed strategies to reduce or eliminate them. The NHS recognizes the need for investigation and solutions rather than resorting 
+                to punitive measures, as emphasized by Professor Philip Banfield, the chair of The British Medical Association (BMA).
+              </p>
+              <p class="project-details__desc-para">
+              The project aims to provide financial and social benefits by tackling this problem. 
+              As part of the initial phase, I focused on data exploration, data wrangling, and visualizations 
+              to identify potential trends in the available datasets. 
+              The key questions posed by the NHS include assessing the adequacy of staff and capacity 
+              within the networks and determining the actual utilization of resources.
+              </p>
+              <p class="project-details__desc-para"> 
+              In addition, my analysis will encompass various aspects, such as understanding the distribution of locations, 
+              service settings, context types, national categories, and appointment statuses within the datasets. I also examined the date 
+              range of the provided data and identify service settings that reported the highest number of appointments during specific periods. 
+              Furthermore, I analyzed the monthly and seasonal trends, observing patterns in appointment numbers across different service settings, 
+              context types, and national categories. Additionally, have explored the top trending hashtags (#) on Twitter related to healthcare in the UK.
+              </p>
+              <p class="project-details__desc-para">
+              By answering a set of agreed questions and examining the data, i provided valuable insights and recommendations for the NHS. 
+              This project enabled me to contribute to the development of effective strategies to optimize staff and resource allocation, 
+              ultimately reducing missed appointments and improving the overall efficiency of the healthcare system.
+              </p>
