@@ -1,0 +1,12 @@
+In this case study, I was provided with data from a manufacturer and retailer called Turtle Games. They have a global customer base, selling various products including books, toys, board games and video games. Turtle Games collect their own sales data as well as customer review data and they have tasked us to leverage this data to provide insights into their overall sale performance and how this can be improved. 
+
+For this assignment, I had to use R/RStudio and Python to conduct the data analysis and demonstrate my findings. 
+
+Other key areas to analyse:
+
+how customers accumulate loyalty points
+how groups within the customer base can be used to target specific market segments 
+how social data (e.g. customer reviews) can be used to inform marketing campaigns
+the impact that each product has on sales
+how reliable the data is (e.g. normal distribution, skewness, or kurtosis)
+what the relationship(s) is/are (if any) between North American, European, and global sales.

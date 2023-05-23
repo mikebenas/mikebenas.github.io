@@ -94,7 +94,7 @@
           </p>
         </div>
         <div class="project-cs-hero__cta">
-          <a href="https://github.com/mikebenas/LSE_TurtleGames_R_Analysis/blob/main/Benas_Mike_DA301_Assignment_Notebook.ipynb" class="btn btn--bg" target="_blank">Live Link</a>
+          <a href="https://github.com/mikebenas/LSE_TurtleGames_R_Analysis/blob/main/Benas_Mike_DA301_Assignment_Notebook.ipynb" class="btn btn--bg" target="_blank">Jupyter Notebook</a>
         </div>
       </div>
     </section>
@@ -103,75 +103,326 @@
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
             <img
-              src="./assets/png/turtl1.png"
+              src="./assets/png/turtle1.png"
               alt="Project Image"
               class="project-details__showcase-img"
             />
+          </div>
+          <div class="project-details__tools-used">
+            <h3 class="project-details__content-title">Key Skills & Resources Used</h3>
+            <div class="skills">
+              <div class="skills__skill">Python</div>
+              <div class="skills__skill">R</div>
+              <div class="skills__skill">K-Means</div>
+              <div class="skills__skill">Clustering</div>
+              <div class="skills__skill">Forecasting</div>
+              <div class="skills__skill">Regression Models</div>
+              <div class="skills__skill">NLP</div>
+              <div class="skills__skill">Sentiment Analysis</div>
+              <div class="skills__skill">Tokenisation</div>
+              <div class="skills__skill">Storytelling</div>
+            </div>
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Project Overview</h3>
               <p class="project-details__desc-para">
-              Turtle Games, a company that both manufactures and sells games, 
-              aimed to analyze their products' segments, gauge customer sentiment, 
-              and predict sales in order to provide actionable insights to stakeholders. 
-              Their main objective was to enhance sales performance by leveraging customer trends. 
-              In this project, I conducted descriptive, diagnostic, prescriptive, and predictive 
-              analyses using both Python and R programming languages. I successfully cleaned and processed the data and created informative visualizations.
+                In the given case study, the individual was provided with data from a 
+                manufacturer and retailer known as Turtle Games. Turtle Games operates 
+                globally and offers a range of products, including books, toys, board games, 
+                and video games. The individual was tasked with analyzing the company's 
+                sales data and customer reviews to gain insights into overall sales performance 
+                and identify areas for improvement.<br>
+                To conduct the data analysis and present the findings, the individual 
+                utilized R/RStudio and Python as the primary tools.<br>
+                The analysis also encompassed the examination of the following key areas:<br>
+                •	How customers earn and accumulate loyalty points.<br>
+                •	How different customer segments within the customer base can be 
+                targeted for specific market strategies.<br>
+                •	How social data, such as customer reviews, can be utilized to shape marketing campaigns.<br>
+                •	The impact of each product on sales performance.<br>
+                •	The reliability of the data, considering factors like normal distribution, skewness, and kurtosis.<br>
+                •	Identifying any potential relationships between sales in North America, Europe, and the global market.<br>
+              </p>
+                <figure>
+                  <img src="./assets/png/turtlefig1.png" alt="Fig1">
+                  <figcaption style="font-size: 16px;">Figure 1:OLS Regression results and Scatter plot to show 
+                    Spending Score vs Loyalty points with Regression line.</figcaption>
+                </figure>
+                <br>
+                <figure>
+                  <img src="./assets/png/turtlefig2.png" alt="Fig2">
+                  <figcaption style="font-size: 16px;">Figure 2: OLS Regression results and Scatter 
+                    plot to show Renumeration vs Loyalty points with Regression line.</figcaption>
+                </figure>
+                <br>
+                <figure>
+                  <img src="./assets/png/turtlefig3.png" alt="Fig3">
+                  <figcaption style="font-size: 16px;">Figure 3: OLS Regression results and Scatter plot 
+                    to Age vs Loyalty points with Regression line.</figcaption>
+                </figure>
+                <br>
+              <p class="project-details__desc-para">
+                Based on the findings presented in Figures 1-3, it is 
+                evident that the r-squared values for all three models are considerably low. 
+                Specifically, the r-squared values are 0.45, 0.38, and 0.002 for spending score 
+                vs. loyalty points, renumeration vs. loyalty points, and age vs. loyalty points, 
+                respectively. A higher r-squared value, closer to 1, indicates a better fit of the 
+                regression model and explains a larger proportion of the total variation in the data.
+                <br>
+                The scatter plots reveal a slight positive relationship or linearity between spending 
+                score vs. loyalty points and renumeration vs. loyalty points. The regression lines in 
+                the plots help visualize this connection. However, no discernible relationship exists 
+                between age and loyalty points, suggesting that further exploration in that direction 
+                is unnecessary.
+                <br>
+                Considering the involvement of multiple variables, 
+                it might be beneficial to consider a multiple linear regression model instead.
+                <br>
+                Expanding upon the analysis conducted with the linear regression models, 
+                let's focus on the utility of renumeration and spending scores in identifying 
+                distinct groups within the customer base for targeted market segmentation. 
+                To accomplish this, we can employ k-means clustering.
+                <br>
+                To determine the optimal number of clusters for our dataset, 
+                we can utilize the Elbow or Silhouette methods. These methods indicate that 
+                testing out 4-6 clusters would be appropriate.
+              </p>
+              <figure>
+                <img src="./assets/png/turtlefig4.png" alt="Fig4">
+                <figcaption style="font-size: 16px;">Figure 4: The Elbow method to 
+                  determine optimal number of clusters.</figcaption>
+              </figure>
+              <br>
+              <figure>
+                <img src="./assets/png/turtlefig5.png" alt="Fig5">
+                <figcaption style="font-size: 16px;">Figure 5: The Silhouette method to
+                   determine the optimal number of clusters.</figcaption>
+              </figure>
+              <br>
+              <p class="project-details__desc-para">
+                Based on the analysis and evaluation of the methods and models mentioned above, 
+                it can be concluded that utilizing 5 clusters yields the most distinct separation 
+                and grouping. It is important to note that this selection is subject to some degree 
+                of subjectivity, as unsupervised models like k-means clustering do not provide predetermined
+                labels. Without expertise in the specific field, determining the ideal labels for the clusters becomes challenging and uncertain. This is recognized as one of the limitations of unsupervised models, where 
+                the interpretation of results can be subjective, especially when clear and definitive labels are not available.
+              </p>
+              <figure>
+                <img src="./assets/png/turtlefig6.png" alt="Fig6">
+                <figcaption style="font-size: 16px;">Figure 6: k-means model using 5 clusters.</figcaption>
+              </figure>
+              <br> 
+              <p class="project-details__desc-para">
+                Upon observing the k-means model depicted in Figure 6, it becomes evident that the 
+                clusters/groups exhibit well-defined boundaries, with minimal overlap among the data 
+                points from different clusters. The characteristics of each cluster are as follows:<br>
+                - Cluster 1 (red): Represents a higher income group that spends more.<br>
+                - Cluster 2 (green): Corresponds to an average income group with average spending habits.<br>
+                - Cluster 3 (blue): Represents a higher income group that spends less.<br>
+                - Cluster 4 (black): Represents a lower income group that spends more.<br>
+                - Cluster 5 (orange): Corresponds to a lower income group that spends less.<br>
+                To gain deeper insights into customer reviews, Natural Language Processing (NLP) 
+                techniques can be employed. Conducting sentiment analysis allows us to identify the 15 most 
+                commonly used words, as well as the top 20 positive and negative reviews received. By importing 
+                and cleaning the data, we were able to tokenize the words and generate a word cloud, aiding in 
+                better understanding the sentiment expressed in the reviews.
+              </p>
+              <figure>
+                <img src="./assets/png/turtlefig7.jpg" alt="Fig7">
+                <figcaption style="font-size: 16px;">Figure 7: Word cloud of the online customer
+                  reviews.</figcaption>
+              </figure>
+              <br>
+              <p class="project-details__desc-para">
+                Upon analyzing the word cloud, it becomes evident that the prominently featured 
+                words are predominantly positive in nature. To validate this observation, we 
+                proceeded to plot the top 15 most frequently used words (Figure 8). Additionally, 
+                a histogram was created to illustrate the sentiment score polarity (Figure 9). 
+                These visualizations serve as further confirmation that the majority of the sentiment 
+                expressed in the reviews is positive.
+              </p>
+              <figure>
+                <img src="./assets/png/turtlefig8.png" alt="Fig8">
+                <figcaption style="font-size: 16px;">Figure 8: Count plot for the top 15 
+                  words used in customer product reviews.</figcaption>
+              </figure>
+              <br>
+              <figure>
+                <img src="./assets/png/turtlefig9.png" alt="Fig9">
+                <figcaption style="font-size: 16px;">Figure 9: Histogram of sentiment 
+                  score polarity of reviews.</figcaption>
+              </figure>
+              <br>
+              <p class="project-details__desc-para">
+              The aforementioned visualizations indeed validate the existence of 
+              a positive sentiment towards the products, and the polarity extends 
+              beyond the neutral and positive ends of the sentiment scale.<br>
+              Furthermore, we successfully presented the top 20 positive and negative reviews. 
+              However, it is important to acknowledge one of the limitations of 
+              utilizing Natural Language Processing (NLP), which lies in the potential for 
+              incorrect interpretations of words or reviews. Figure 10 illustrates this issue 
+              when examining the list of the top 20 negative reviews. It becomes apparent 
+              that some of the reviews are actually positive in nature, but the NLP model 
+              has erroneously classified them as negative. This highlights the importance 
+              of cautious interpretation and manual review when working with NLP results to 
+              account for potential misclassifications.
+              </p>
+              <figure>
+                <img src="./assets/png/turtlefig10.jpg" alt="Fig10">
+                <figcaption style="font-size: 16px;">Figure 10: List of top 20 negative sentiment 
+                  reviews with positive reviews mixed.</figcaption>
+              </figure>
+              <br>
+              <p class="project-details__desc-para">
+              When considering the sales data, it is challenging to precisely determine the specific 
+              impact of a product on overall sales based solely on the available data. This limitation 
+              arises from the absence of sales trend data over time, as our dataset only includes 
+              information for the year each product was released.<br>
+              Nevertheless, by grouping the data according to the "Product" category, 
+              we can identify the highest and lowest selling products within the two regions. 
+              This analysis enables the marketing team to focus their efforts on promoting the 
+              right products, thereby enhancing sales. While we may not have a comprehensive understanding 
+              of the overall impact of each product, this information empowers the marketing team to 
+              strategically tailor their marketing campaigns to drive improved sales performance.
+              </p>
+              <figure>
+                <img src="./assets/png/turtlefig11.jpg" alt="Fig11">
+                <figcaption style="font-size: 16px;">Figure 11: Bar chart to show the highest selling products in 
+                  £millions for North America</figcaption>
+              </figure>
+              <br>
+              <figure>
+                <img src="./assets/png/turtlefig12.jpg" alt="Fig12">
+                <figcaption style="font-size: 16px;">Figure 12: Bar chart to show the highest 
+                  selling products in £millions for Europe</figcaption>
+              </figure>
+              <br>
+              <figure>
+                <img src="./assets/png/turtlefig13.jpg" alt="Fig13">
+                <figcaption style="font-size: 16px;">Figure 13: Boxplot to show the number of 
+                  games sold (£millions) for each region.</figcaption>
+              </figure>
+              <br>
+              <p class="project-details__desc-para">
+              We can see from Figure 13 that North America has a higher median number of 
+              sales compared to Europe and all regions have many outliers. 
+              The Histogram helped to visualise this also.
+              </p>
+              <figure>
+                <img src="./assets/png/turtlefig14.jpg" alt="Fig14">
+                <figcaption style="font-size: 16px;">Figure 14: Histogram to show the 
+                  distribution for Global sales.</figcaption>
+              </figure>
+              <br>
+              <p class="project-details__desc-para">
+              Figure 14 shows that the data is skewed to the right and so the few larger values 
+              raise the mean higher than the median. This is not a normal distribution. 
+              We can confirm this by running the Shapiro-Wilk test; skewness and the kurtosis functions.
               </p>
               <p class="project-details__desc-para">
-              In Python, I utilized Linear Regression to build and evaluate models for predicting values for the Marketing department. 
-              Meanwhile, I performed the analysis for the Sales department in R, where I conducted statistical calculations, 
-              assessed data normality through techniques such as Q-Q plots, skewness, kurtosis, and the Shapiro-Wilk test. 
-              I also fitted multiple regression models to determine the most suitable one.
-              </p>
-              <p class="project-details__desc-para">
-              To cater to the marketing department's needs, 
-              I identified distinct customer groups that could be targeted for specific market segments. 
-              Using k-means clustering, I determined the optimal number of clusters and visualized the resulting segments. 
-              On the other hand, the sales department required an assessment of the reliability of data extracted from their website. 
-              I explored, prepared, and explained the normality of the dataset using various statistical techniques. 
-              Additionally, I examined the impact of products on sales through visualizations and employed Multiple Linear Regression in R to find an appropriate model.
-                </p>
+                <figure>
+                  <img src="./assets/png/turtlefig15.png" alt="Fig15">
+                  <figcaption style="font-size: 16px;">Figure 15: Shapiro Wilk test 
+                    results for all regions</figcaption>
+                </figure>
+                <br>
                 <p class="project-details__desc-para">
-              Furthermore, I addressed the marketing department's interest in leveraging 
-              social data for informing marketing campaigns. 
-              By employing Natural Language Processing (NLP), I generated word clouds and analyzed sentiment scores.
+                Figure 15 shows that the p-value is less than 0.05 for all three 
+                regions, meaning that the null hypothesis should be rejected and 
+                therefore the sales data is not normally distributed.
                 </p>
+                <figure>
+                  <img src="./assets/png/turtlefig16.png" alt="Fig16">
+                  <figcaption style="font-size: 16px;">Figure 16: Skewness and Kurtosis 
+                    scores for all regions</figcaption>
+                </figure>
+                <br>
                 <p class="project-details__desc-para">
-              Lastly, I identified valuable insights and presented recommendations, 
-              highlighting areas that could benefit from further analysis, 
-              while effectively addressing the business problems at hand.
-            </p>
-            </div>
-            <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Tools Used</h3>
-              <div class="skills">
-                <div class="skills__skill">Python</div>
-                <div class="skills__skill">R</div>
-                <div class="skills__skill">K-Means</div>
-                <div class="skills__skill">Clustering</div>
-                <div class="skills__skill">Forecasting</div>
-                <div class="skills__skill">Regression Models</div>
-                <div class="skills__skill">NLP</div>
-                <div class="skills__skill">Sentiment Analysis</div>
-                <div class="skills__skill">Tokenisation</div>
-                <div class="skills__skill">Storytelling</div>
-              </div>
+                  Figure 16 shows us that the skewness values are positive indicating 
+                  that the tail is on the right side of distribution and the Kurtosis 
+                  is leptokurtic (heavy-tailed), meaning that data produces more outliers 
+                  than a normal distribution.<br>
+                  If data is not normally distributed it could impact any machine learning 
+                  models that we use for predictive analytics. We would need to remove any outliers, 
+                  but this could reduce the data sample and so it would be best to get a larger data 
+                  set so that we can get a more distribution.<br>
+                  To confirm if there are any relationships between North American, 
+                  European, and Global sales, we are able to create a linear regression model
+                </p>
+                <figure>
+                  <img src="./assets/png/turtlefig17.png" alt="Fig17">
+                  <figcaption style="font-size: 16px;">Figure 17: Using cor() function to create 
+                    correlations between the variable, North American, European, and global sales</figcaption>
+                </figure>
+                <br>
+                <p class="project-details__desc-para">
+                The cor() values show us that there is a positive relationship between all 3 regions but 
+                the strongest correlation (91.6%) is between North American Sales and Global Sales. 
+                By plotting the relationships, we are able to visualise this relationship (Figure 18).
+                </p>
+                <figure>
+                  <img src="./assets/png/turtlefig18.jpg" alt="Fig18">
+                  <figcaption style="font-size: 16px;">Figure 18: Scatter plot for the correlation 
+                    between North American Sales and Global sales (£millions)</figcaption>
+                </figure>
+                <br>
+                <p class="project-details__desc-para">
+                As there are multiple variables, a multiple linear regression model 
+                is more appropriate to assess the effect of the variables on the dependent variable.
+                </p>
+                <figure>
+                  <img src="./assets/png/turtlefig19.png" alt="Fig19">
+                  <figcaption style="font-size: 16px;">Figure 19: Using cor() function to show the 
+                  correlations between the North American, European, and global sales in a multiple linear regression model.</figcaption>
+                </figure>
+                <br>
+                <figure>
+                  <img src="./assets/png/turtlefig20.png" alt="Fig20">
+                  <figcaption style="font-size: 16px;">Figure 20: Summary of the multiple linear regression model.</figcaption>
+                </figure>
+                <br>
+                <p class="project-details__desc-para">
+                  The summary statistics for the multiple linear regression show us that we can be very confident with our model; 
+                  the p-values are less than 0.05, and the adjusted R-squared value is very high (96.6%). 
+                  This tells us that EU_Sales and NA_Sales are highly significant variables in relationship to Global sales.
+                  We can use this model to test its ability to predict the global sales and compare with what was actually observed.
+                </p>
+                <figure>
+                  <img src="./assets/png/turtlefig21.png" alt="Fig21">
+                  <figcaption style="font-size: 16px;">Figure 21: Using our multiple linear regression to 
+                    compare predicted global sales values to what was actually observed.</figcaption>
+                </figure>
+                <br>
+                <p class="project-details__desc-para">
+                From our analysis, we have been able to identify the key groups of customers shopping at Turtles Games, 
+                based on renumeration and spending scores and the best groups to target to boost sales (Groups 1 and 0 from Figure 6).<br>
+                Our sentiment analysis demonstrated that customers had predominantly positive sentiments towards the company 
+                and the sentiment polarity distribution was more neutral to positive. We were able to identify the highest and 
+                lowest selling products for all regions and so Turtles Games will be better informed when it comes to 
+                marketing so that they promote the most popular products.<br>
+                In terms of relationships relating to sales data, our analysis showed that there was a positive 
+                relationship with North American, Europeans sales and Global Sales; although, North American Sales had the 
+                strongest relationship with Global sales and so this would be a key market to focus on also. We were able 
+                to predict the Global sales with very strong accuracy using a multiple linear regression model. Questions 
+                were raised regarding the distribution of the data and so to further our analysis, we would suggest getting 
+                data from a bigger sample that is more representative of the normal distribution or data for a longer time frame.
+                </p>
             </div>
             <div class="project-details__links">
-              <h3 class="project-details__content-title">See Live</h3>
+              <h3 class="project-details__content-title">You can find the Jupyter Notebook, 
+                Presentation and other useful files in the links below</h3>
               <a
                 href="https://github.com/mikebenas/LSE_TurtleGames_R_Analysis/tree/main"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
-                >Live Link</a
+                >Jupyter Notebook</a
               >
               <a
                 href="https://github.com/mikebenas/LSE_TurtleGames_R_Analysis/blob/main/Benas_Mike_DA301_Assignment_Notebook.ipynb"
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
-                >Code Link</a
+                >GIT Repo</a
               >
             </div>
           </div>
