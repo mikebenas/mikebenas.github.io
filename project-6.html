@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZZ8RGSTKB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZZZ8RGSTKB');
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fleet Certificate Management Platform | Mike Benas</title>
+    <meta name="description" content="A vessel certificate tracking and renewal platform with a Power BI reporting layer" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/Mike1.png"
+              alt="Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Mike Benas</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Fleet Certificate Management Platform</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            An internal platform built for a shipping company I previously worked for:
+            tracking every vessel certificate across the fleet, validating submitted copies,
+            and automatically chasing owners and agents before expiry &mdash; with a
+            Power BI reporting layer on top.
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="mailto:mikebenas@gmail.com" class="btn btn--bg">Ask Me About It</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/png/certapp-overview.png"
+              alt="Power BI fleet certificate compliance overview dashboard (recreated with sample data)"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__tools-used">
+            <h3 class="project-details__content-title">Key Skills &amp; Domains</h3>
+            <div class="skills">
+              <div class="skills__skill">Power BI</div>
+              <div class="skills__skill">Process Automation</div>
+              <div class="skills__skill">Email Templating</div>
+              <div class="skills__skill">Certificate Compliance</div>
+              <div class="skills__skill">Data Modelling</div>
+              <div class="skills__skill">Shipping Operations</div>
+            </div>
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">The Problem</h3>
+              <p class="project-details__desc-para">
+                Every vessel carries a stack of statutory, class and insurance certificates
+                &mdash; Class, SMC, ISSC, IOPP, Load Line, MLC and more &mdash; each with its
+                own expiry date. Tracking them across a fleet by spreadsheet and inbox is
+                error-prone, and a lapsed certificate can hold up port calls, charter
+                deliveries and insurance cover. The chasing itself was manual: someone had to
+                remember to email the owner or agent, again and again.
+              </p>
+              <h3 class="project-details__content-title">What I Built</h3>
+              <p class="project-details__desc-para">
+                A central register of certificates per vessel, with validity checks on every
+                submitted copy: type, issue and expiry dates, and issuing body captured on
+                upload, so an out-of-date or wrong document is flagged immediately instead of
+                being discovered when it matters.
+              </p>
+              <p class="project-details__desc-para">
+                Around the register sits an automated reminder workflow: templated emails to
+                agents and owners at set intervals before expiry (90 / 60 / 30 days and a
+                final notice), each requesting an updated copy &mdash; and the cycle closes
+                when the newer certificate is uploaded and validated. What used to depend on
+                someone's memory became a process that runs itself.
+              </p>
+              <h3 class="project-details__content-title">Reporting in Power BI</h3>
+              <p class="project-details__desc-para">
+                On top of the register, a Power BI layer gives management the fleet-wide view:
+                compliance rate, what is expiring and when, which vessels need attention, and
+                how the reminder pipeline is performing.
+              </p>
+              <p class="project-details__desc-para">
+                <em>The dashboards below are recreated with fictional vessel names and sample
+                data, as the original system and its data belong to the company.</em>
+              </p>
+              <div class="project-details__showcase-img-cont">
+                <img src="./assets/png/certapp-matrix.png"
+                     alt="Power BI certificate status matrix by vessel and certificate type (recreated with sample data)"
+                     class="project-details__showcase-img" />
+              </div>
+              <p class="project-details__desc-para">
+                The status matrix became the daily working view: every vessel against every
+                certificate type, colour-coded, with days-to-expiry on anything inside the
+                90-day window &mdash; one glance replacing a morning of spreadsheet checks.
+              </p>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">Want the full story?</h3>
+              <a href="mailto:mikebenas@gmail.com"
+                 class="btn btn--med btn--theme project-details__links-btn"
+                 >Get in Touch</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
