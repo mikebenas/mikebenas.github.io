@@ -24,7 +24,84 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
-  </head>
+  
+    <style>
+      /* ===== Featured project ===== */
+      .projects__row--featured {
+        border: 2px solid #0062b9;
+        border-radius: 12px;
+        padding: 4rem;
+        background: linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%);
+        box-shadow: 0 10px 40px rgba(0, 98, 185, 0.08);
+      }
+      .projects__row-img--framed {
+        border-radius: 8px;
+        border: 1px solid #dbe7f3;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+      }
+      .featured-badge {
+        display: inline-block;
+        background: #0062b9;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 0.5rem 1.4rem;
+        border-radius: 100px;
+        margin-bottom: 2rem;
+      }
+
+      /* ===== Collapsible archive ===== */
+      .projects-archive {
+        border: 1px solid #e3e8ee;
+        border-radius: 12px;
+        background: #fafbfc;
+        overflow: hidden;
+      }
+      .projects-archive__summary {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2.5rem 3rem;
+        cursor: pointer;
+        list-style: none;
+        user-select: none;
+        transition: background 0.2s;
+      }
+      .projects-archive__summary::-webkit-details-marker { display: none; }
+      .projects-archive__summary:hover { background: #f0f4f8; }
+      .projects-archive__folder { font-size: 2.6rem; }
+      .projects-archive__title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #111;
+      }
+      .projects-archive__count {
+        font-size: 1.4rem;
+        color: #777;
+        background: #eceff3;
+        padding: 0.3rem 1.2rem;
+        border-radius: 100px;
+      }
+      .projects-archive__chevron {
+        margin-left: auto;
+        font-size: 2rem;
+        color: #555;
+        transition: transform 0.25s ease;
+      }
+      .projects-archive[open] .projects-archive__chevron { transform: rotate(180deg); }
+      .projects-archive__body {
+        padding: 4rem 3rem 1rem;
+        border-top: 1px solid #e3e8ee;
+      }
+      @media only screen and (max-width: 600px) {
+        .projects__row--featured { padding: 2rem; }
+        .projects-archive__summary { padding: 2rem 1.5rem; flex-wrap: wrap; }
+        .projects-archive__body { padding: 2rem 1.5rem 0.5rem; }
+      }
+    </style>
+</head>
   <body>
     <header class="header">
       <div class="header__content">
@@ -214,13 +291,52 @@
         <h2 class="heading heading-sec heading-sec__mb-bg">
           <span class="heading-sec__main">Projects</span>
           <span class="heading-sec__sub">
-            Check out my diverse projects portfolio where I've tackled real-world data challenges head-on, 
-            showcasing my problem-solving skills and analytical prowess. 
-            From predictive modeling to data visualization, each project reflects my dedication to delivering impactful insights through the power of data.
+            Where shipping operations meets software. My latest work is a purpose-built bunkering
+            application drawing on 15+ years in maritime operations, alongside a set of earlier
+            data analytics case studies covering Python, R, SQL and Tableau.
           </span>
         </h2>
 
         <div class="projects__content">
+          <!-- ============ FEATURED PROJECT ============ -->
+          <div class="projects__row projects__row--featured">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/png/bunkerapp.png"
+                alt="Bunkering operations app screenshot"
+                class="projects__row-img projects__row-img--framed"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <span class="featured-badge">Featured &middot; 2026</span>
+              <h3 class="projects__row-content-title">Bunkering Operations App</h3>
+              <p class="projects__row-content-desc">
+                A working application built on 15+ years of shipping operations experience:
+                streamlining bunker planning, stem tracking and cost visibility for voyage operators.
+                Designed and built end-to-end, from mapping the operational workflow to the interface itself.
+                <br>
+                Tags# <strong>Product Build - Shipping Operations - Bunkering - Full-Stack - Domain Expertise</strong>
+              </p>
+              <a
+                href="#"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- ============ ARCHIVED CASE STUDIES (collapsible) ============ -->
+          <details class="projects-archive">
+            <summary class="projects-archive__summary">
+              <span class="projects-archive__folder">&#128193;</span>
+              <span class="projects-archive__title">Data Analytics Case Studies</span>
+              <span class="projects-archive__count">4 projects</span>
+              <span class="projects-archive__chevron">&#9662;</span>
+            </summary>
+            <div class="projects-archive__body">
+
           <div class="projects__row">
             <div class="projects__row-img-cont">
               <img
@@ -319,6 +435,9 @@
               >
             </div>
           </div>
+            </div>
+          </details>
+
         </div>
       </div>
     </section>
