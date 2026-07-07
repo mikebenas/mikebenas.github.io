@@ -100,7 +100,113 @@
         .projects-archive__summary { padding: 2rem 1.5rem; flex-wrap: wrap; }
         .projects-archive__body { padding: 2rem 1.5rem 0.5rem; }
       }
-    </style>
+
+      /* ===== 2x2 quadrant layout ===== */
+      .quad-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 100vh;
+        padding-top: 8rem; /* clears fixed header */
+        box-sizing: border-box;
+      }
+      .quad {
+        overflow-y: auto;
+        padding: 2.5rem 3rem;
+        border: 1px solid #e3e8ee;
+        min-height: 0;
+      }
+      .quad__heading {
+        font-size: 1.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #111;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Quadrant 1: hero */
+      .quad--hero { padding: 0 !important; }
+      .quad--hero .home-hero {
+        height: 100% !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        padding: 2rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .quad--hero .home-hero__content {
+        position: static !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding: 0 2rem !important;
+        max-width: 100% !important;
+      }
+      .quad--hero .heading-primary { font-size: 3rem !important; margin-bottom: 1.2rem !important; }
+      .quad--hero .home-hero__info { margin: 0 auto 1.8rem !important; max-width: 55rem !important; }
+      .quad--hero .text-primary { font-size: 1.5rem !important; line-height: 1.55 !important; }
+      .quad--hero .btn--bg { padding: 1rem 3rem !important; font-size: 1.4rem !important; }
+      .home-hero__socials, .home-hero__mouse-scroll-cont { display: none !important; }
+
+      /* Quadrant 2: about */
+      .quad--about #about.sec-pad { padding: 0 !important; }
+      .quad--about .main-container { padding: 0 !important; max-width: 100% !important; }
+      .quad--about .heading-sec__mb-med { margin-bottom: 2rem !important; }
+      .quad--about .heading-sec__main { font-size: 2rem !important; margin-bottom: 0.4rem !important; }
+      .quad--about .heading-sec__sub { font-size: 1.35rem !important; }
+      .quad--about .about__content {
+        display: block !important;
+      }
+      .quad--about .about__content-title { font-size: 1.6rem !important; margin-bottom: 1rem !important; }
+      .quad--about .about__content-details-para {
+        font-size: 1.4rem !important; line-height: 1.5 !important; margin-bottom: 1rem !important;
+      }
+      .quad--about .about__content-main { margin-bottom: 2rem !important; }
+      .quad--about .btn--med { padding: 0.7rem 2.2rem !important; font-size: 1.3rem !important; }
+      .quad--about .skills__skill { padding: 0.5rem 1.1rem !important; font-size: 1.2rem !important; margin: 0.3rem !important; }
+
+      /* Quadrant 3: featured */
+      .quad--featured .projects__row--featured {
+        display: block !important;
+        padding: 1.8rem !important;
+        margin-bottom: 0 !important;
+      }
+      .quad--featured .projects__row-img-cont { margin-bottom: 1.5rem !important; }
+      .quad--featured .projects__row-img { width: 100% !important; height: auto !important; }
+      .quad--featured .projects__row-content { align-items: flex-start !important; }
+      .quad--featured .projects__row-content-title { font-size: 1.8rem !important; margin-bottom: 0.8rem !important; }
+      .quad--featured .projects__row-content-desc { font-size: 1.35rem !important; line-height: 1.5 !important; margin-bottom: 1.2rem !important; }
+      .featured-badge { font-size: 1rem !important; padding: 0.3rem 1rem !important; margin-bottom: 0.8rem !important; }
+      .quad--featured .btn--med { padding: 0.7rem 2.2rem !important; font-size: 1.3rem !important; }
+
+      /* Quadrant 4: archive */
+      .quad--archive .projects-archive { background: #fff; }
+      .projects-archive__summary { padding: 1.4rem 1.8rem !important; }
+      .projects-archive__folder { font-size: 1.8rem !important; }
+      .projects-archive__title { font-size: 1.5rem !important; }
+      .projects-archive__count { font-size: 1.1rem !important; }
+      .projects-archive__body { padding: 2rem 1.8rem 0.5rem !important; }
+      .quad--archive .projects__row {
+        display: block !important;
+        margin-bottom: 2.5rem !important;
+      }
+      .quad--archive .projects__row-img-cont { margin-bottom: 1rem !important; }
+      .quad--archive .projects__row-img { width: 100% !important; }
+      .quad--archive .projects__row-content-title { font-size: 1.6rem !important; margin-bottom: 0.6rem !important; }
+      .quad--archive .projects__row-content-desc { font-size: 1.3rem !important; line-height: 1.45 !important; margin-bottom: 1rem !important; }
+      .quad--archive .btn--med { padding: 0.6rem 2rem !important; font-size: 1.2rem !important; }
+
+      /* Mobile: stack quadrants naturally */
+      @media only screen and (max-width: 900px) {
+        .quad-grid {
+          display: block;
+          height: auto;
+        }
+        .quad { overflow-y: visible; }
+        .quad--hero .home-hero { padding: 4rem 2rem !important; }
+      }
+      </style>
 </head>
   <body>
     <header class="header">
@@ -168,7 +274,9 @@
         </div>
       </div>
     </header>
-    <section class="home-hero">
+    <div class="quad-grid">
+      <div class="quad quad--hero">
+        <section class="home-hero">
       <div class="home-hero__content">
         <h1 class="heading-primary">Mike Benas</h1>
         <div class="home-hero__info">
@@ -237,7 +345,9 @@
         <div class="mouse"></div>
       </div>
     </section>
-    <section id="about" class="about sec-pad">
+      </div>
+      <div class="quad quad--about">
+        <section id="about" class="about sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">About Me</span>
@@ -256,8 +366,8 @@
                 grounded in how shipping actually works day to day.
               </p>
               <p class="about__content-details-para">
-                The featured project is a <strong>bunkering operations app</strong> built from that
-                experience; the case studies below it cover analytics work in Python, R, SQL and Tableau.
+                Featured below: <strong>Revert</strong>, a bunker price platform built from that
+                experience, alongside earlier analytics case studies.
               </p>
             </div>
             <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
@@ -284,20 +394,10 @@
         </div>
       </div>
     </section>
-    <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Projects</span>
-          <span class="heading-sec__sub">
-            Where shipping operations meets software. My latest work is a purpose-built bunkering
-            application drawing on 15+ years in maritime operations, alongside a set of earlier
-            data analytics case studies covering Python, R, SQL and Tableau.
-          </span>
-        </h2>
-
-        <div class="projects__content">
-          <!-- ============ FEATURED PROJECT ============ -->
-          <div class="projects__row projects__row--featured">
+      </div>
+      <div class="quad quad--featured" id="projects">
+        <h2 class="quad__heading">Featured Project</h2>
+        <div class="projects__row projects__row--featured">
             <div class="projects__row-img-cont">
               <img
                 src="./assets/png/bunkerapp.png"
@@ -310,12 +410,10 @@
               <span class="featured-badge">Featured &middot; 2026</span>
               <h3 class="projects__row-content-title">Revert &mdash; Bunker Price Intelligence</h3>
               <p class="projects__row-content-desc">
-                Global bunker prices in one platform: port-level spot indications across all major
-                fuel grades, day-ahead forecasts, historical charts, price alerts and a
-                natural-language assistant (Ask Revert). Built end-to-end on 15+ years of
-                shipping operations experience.
+                Global bunker prices in one platform: port-level spot indications, day-ahead
+                forecasts, historical charts, alerts and a natural-language assistant.
                 <br>
-                Tags# <strong>Product Build - Bunker Markets - Forecasting - Data Viz - AI Assistant - Full-Stack</strong>
+                Tags# <strong>Bunker Markets - Forecasting - Data Viz - AI Assistant - Full-Stack</strong>
               </p>
               <a
                 href="./project-5.html"
@@ -324,9 +422,10 @@
               >
             </div>
           </div>
-
-          <!-- ============ ARCHIVED CASE STUDIES (collapsible) ============ -->
-          <details class="projects-archive">
+      </div>
+      <div class="quad quad--archive" id="archive">
+        <h2 class="quad__heading">Data Analytics Case Studies</h2>
+        <details class="projects-archive">
             <summary class="projects-archive__summary">
               <span class="projects-archive__folder">&#128193;</span>
               <span class="projects-archive__title">Data Analytics Case Studies</span>
@@ -435,10 +534,8 @@
           </div>
             </div>
           </details>
-
-        </div>
       </div>
-    </section>
+    </div>
     <section id="contact" class="contact sec-pad dynamicBg">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
