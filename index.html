@@ -101,110 +101,133 @@
         .projects-archive__body { padding: 2rem 1.5rem 0.5rem; }
       }
 
-      /* ===== 2x2 quadrant layout ===== */
-      .quad-grid {
+      /* ===== 1/3 + 2/3 split layout ===== */
+      .split-layout {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
         height: 100vh;
-        padding-top: 8rem; /* clears fixed header */
+        padding-top: 8rem;
         box-sizing: border-box;
       }
-      .quad {
+
+      /* Left: profile panel */
+      .split-left {
+        background: linear-gradient(135deg, #0d1d30 0%, #16324f 60%, #1b4066 100%);
+        color: #fff;
+        padding: 4rem 3.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         overflow-y: auto;
-        padding: 2.5rem 3rem;
-        border: 1px solid #e3e8ee;
+      }
+      .split-left__name {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 3.4rem;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin-bottom: 1.8rem;
+      }
+      .split-left__intro {
+        font-size: 1.5rem;
+        line-height: 1.65;
+        color: rgba(255,255,255,0.88);
+        margin-bottom: 2.5rem;
+      }
+      .split-left__subhead {
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #8fc1ee;
+        margin-bottom: 1.2rem;
+      }
+      .split-left__skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-bottom: 3rem;
+      }
+      .split-left__skills span {
+        background: rgba(255,255,255,0.10);
+        border: 1px solid rgba(255,255,255,0.22);
+        border-radius: 100px;
+        padding: 0.5rem 1.4rem;
+        font-size: 1.3rem;
+        color: #fff;
+      }
+      .split-left__actions { display: flex; gap: 1.2rem; }
+      .split-left__btn {
+        display: inline-block;
+        background: #fff;
+        color: #16324f;
+        font-size: 1.4rem;
+        font-weight: 700;
+        padding: 1rem 2.8rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: transform 0.2s;
+      }
+      .split-left__btn:hover { transform: translateY(-2px); }
+      .split-left__btn--ghost {
+        background: transparent;
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.5);
+      }
+
+      /* Right: projects */
+      .split-right {
+        padding: 3rem 3.5rem;
+        overflow-y: auto;
         min-height: 0;
       }
-      .quad__heading {
-        font-size: 1.8rem;
+      .split-right__heading {
+        font-size: 1.6rem;
         font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 1.5px;
         color: #111;
         margin-bottom: 1.5rem;
       }
-
-      /* Quadrant 1: hero */
-      .quad--hero { padding: 0 !important; }
-      .quad--hero .home-hero {
-        height: 100% !important;
-        min-height: 0 !important;
-        max-height: none !important;
+      .split-right__heading--mt { margin-top: 3rem; }
+      .split-right .projects__row--featured {
+        display: grid !important;
+        grid-template-columns: 1.15fr 1fr;
+        grid-gap: 2.5rem;
+        align-items: center;
         padding: 2rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-      }
-      .quad--hero .home-hero__content {
-        position: static !important;
-        transform: none !important;
-        margin: 0 !important;
-        padding: 0 2rem !important;
-        max-width: 100% !important;
-      }
-      .quad--hero .heading-primary { font-size: 3rem !important; margin-bottom: 1.2rem !important; }
-      .quad--hero .home-hero__info { margin: 0 auto 1.8rem !important; max-width: 55rem !important; }
-      .quad--hero .text-primary { font-size: 1.5rem !important; line-height: 1.55 !important; }
-      .quad--hero .btn--bg { padding: 1rem 3rem !important; font-size: 1.4rem !important; }
-      .home-hero__socials, .home-hero__mouse-scroll-cont { display: none !important; }
-
-      /* Quadrant 2: about */
-      .quad--about #about.sec-pad { padding: 0 !important; }
-      .quad--about .main-container { padding: 0 !important; max-width: 100% !important; }
-      .quad--about .heading-sec__mb-med { margin-bottom: 2rem !important; }
-      .quad--about .heading-sec__main { font-size: 2rem !important; margin-bottom: 0.4rem !important; }
-      .quad--about .heading-sec__sub { font-size: 1.35rem !important; }
-      .quad--about .about__content {
-        display: block !important;
-      }
-      .quad--about .about__content-title { font-size: 1.6rem !important; margin-bottom: 1rem !important; }
-      .quad--about .about__content-details-para {
-        font-size: 1.4rem !important; line-height: 1.5 !important; margin-bottom: 1rem !important;
-      }
-      .quad--about .about__content-main { margin-bottom: 2rem !important; }
-      .quad--about .btn--med { padding: 0.7rem 2.2rem !important; font-size: 1.3rem !important; }
-      .quad--about .skills__skill { padding: 0.5rem 1.1rem !important; font-size: 1.2rem !important; margin: 0.3rem !important; }
-
-      /* Quadrant 3: featured */
-      .quad--featured .projects__row--featured {
-        display: block !important;
-        padding: 1.8rem !important;
         margin-bottom: 0 !important;
       }
-      .quad--featured .projects__row-img-cont { margin-bottom: 1.5rem !important; }
-      .quad--featured .projects__row-img { width: 100% !important; height: auto !important; }
-      .quad--featured .projects__row-content { align-items: flex-start !important; }
-      .quad--featured .projects__row-content-title { font-size: 1.8rem !important; margin-bottom: 0.8rem !important; }
-      .quad--featured .projects__row-content-desc { font-size: 1.35rem !important; line-height: 1.5 !important; margin-bottom: 1.2rem !important; }
-      .featured-badge { font-size: 1rem !important; padding: 0.3rem 1rem !important; margin-bottom: 0.8rem !important; }
-      .quad--featured .btn--med { padding: 0.7rem 2.2rem !important; font-size: 1.3rem !important; }
+      .split-right .projects__row-img { width: 100%; height: auto; }
+      .split-right .projects__row-content { align-items: flex-start !important; }
+      .split-right .projects__row-content-title { font-size: 1.9rem !important; margin-bottom: 0.8rem !important; }
+      .split-right .projects__row-content-desc { font-size: 1.4rem !important; line-height: 1.55 !important; margin-bottom: 1.4rem !important; }
+      .featured-badge { font-size: 1rem !important; padding: 0.3rem 1rem !important; margin-bottom: 0.9rem !important; }
+      .split-right .btn--med { padding: 0.8rem 2.4rem !important; font-size: 1.3rem !important; }
 
-      /* Quadrant 4: archive */
-      .quad--archive .projects-archive { background: #fff; }
-      .projects-archive__summary { padding: 1.4rem 1.8rem !important; }
-      .projects-archive__folder { font-size: 1.8rem !important; }
+      .projects-archive__summary { padding: 1.5rem 2rem !important; }
+      .projects-archive__folder { font-size: 1.9rem !important; }
       .projects-archive__title { font-size: 1.5rem !important; }
       .projects-archive__count { font-size: 1.1rem !important; }
-      .projects-archive__body { padding: 2rem 1.8rem 0.5rem !important; }
-      .quad--archive .projects__row {
-        display: block !important;
+      .projects-archive__body { padding: 2rem !important; }
+      .split-right .projects-archive .projects__row {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        grid-gap: 2rem;
+        align-items: center;
         margin-bottom: 2.5rem !important;
       }
-      .quad--archive .projects__row-img-cont { margin-bottom: 1rem !important; }
-      .quad--archive .projects__row-img { width: 100% !important; }
-      .quad--archive .projects__row-content-title { font-size: 1.6rem !important; margin-bottom: 0.6rem !important; }
-      .quad--archive .projects__row-content-desc { font-size: 1.3rem !important; line-height: 1.45 !important; margin-bottom: 1rem !important; }
-      .quad--archive .btn--med { padding: 0.6rem 2rem !important; font-size: 1.2rem !important; }
+      .split-right .projects-archive .projects__row-img { width: 100%; }
+      .split-right .projects-archive .projects__row-content-title { font-size: 1.6rem !important; margin-bottom: 0.6rem !important; }
+      .split-right .projects-archive .projects__row-content-desc { font-size: 1.3rem !important; line-height: 1.5 !important; margin-bottom: 1rem !important; }
 
-      /* Mobile: stack quadrants naturally */
+      /* Mobile: stack */
       @media only screen and (max-width: 900px) {
-        .quad-grid {
-          display: block;
-          height: auto;
-        }
-        .quad { overflow-y: visible; }
-        .quad--hero .home-hero { padding: 4rem 2rem !important; }
+        .split-layout { display: block; height: auto; }
+        .split-left { min-height: 0; padding: 3rem 2.5rem; }
+        .split-right { overflow-y: visible; }
+        .split-right .projects__row--featured,
+        .split-right .projects-archive .projects__row { display: block !important; }
+        .split-right .projects__row-img-cont { margin-bottom: 1.2rem; }
       }
       </style>
 </head>
@@ -274,129 +297,26 @@
         </div>
       </div>
     </header>
-    <div class="quad-grid">
-      <div class="quad quad--hero">
-        <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">Mike Benas</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
-            Shipping operations professional with 15+ years across dry bulk and LPG,
-            based in Geneva. I combine hands-on operational experience with a background
-            in enterprise IT to build practical software for the maritime industry.
-<br>
-          </p>
+    <div class="split-layout">
+      <aside class="split-left" id="about">
+        <h1 class="split-left__name">Mike Benas</h1>
+        <p class="split-left__intro">
+          Shipping operations professional with 15+ years across dry bulk and LPG,
+          based in Geneva. I combine hands-on operational experience with a background
+          in enterprise IT to build practical software for the maritime industry.
+        </p>
+        <h3 class="split-left__subhead">Core Skills</h3>
+        <div class="split-left__skills">
+          <span>Python</span><span>R</span><span>PostgreSQL</span>
+          <span>Tableau</span><span>AWS</span><span>ERPs</span>
         </div>
-        <div class="home-hero__cta">
-          <a href="./#projects" class="btn btn--bg">Projects</a>
+        <div class="split-left__actions">
+          <a href="./#contact" class="split-left__btn">Contact</a>
+          <a href="https://www.linkedin.com/in/mike-benas/" target="_blank" rel="noreferrer" class="split-left__btn split-left__btn--ghost">LinkedIn</a>
         </div>
-      </div>
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="https://www.linkedin.com/in/mike-benas/" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/linkedin-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://github.com/mikebenas" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/github-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/twitter-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="#" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/yt-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a
-            href="#"
-            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-          >
-            <img
-              src="./assets/png/insta-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-    </section>
-      </div>
-      <div class="quad quad--about">
-        <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">About Me</span>
-          <span class="heading-sec__sub">
-            Operations experience, applied through software and data.
-          </span>
-        </h2>
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">Background</h3>
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                I've spent over 15 years in <strong>commercial and operational shipping</strong> roles
-                across dry bulk and LPG, with an earlier career in <strong>enterprise IT</strong>.
-                That combination is the thread running through this site: software and analysis
-                grounded in how shipping actually works day to day.
-              </p>
-              <p class="about__content-details-para">
-                Featured below: <strong>Revert</strong>, a bunker price platform built from that
-                experience, alongside earlier analytics case studies.
-              </p>
-            </div>
-            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
-              >Contact</a
-            >
-          </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-            <div class="skills">
-              <div class="skills__skill">Python</div>
-              <div class="skills__skill">R</div>
-              <div class="skills__skill">PostgreSQL</div>
-              <div class="skills__skill">BigQuery</div>
-              <div class="skills__skill">GIT</div>
-              <div class="skills__skill">AWS</div>
-              <div class="skills__skill">ERPs</div>
-              <div class="skills__skill">Tableau</div>
-              <div class="skills__skill">BI</div>
-              <div class="skills__skill">Google Analytics</div>
-              <div class="skills__skill">Statistical Modelling</div>
-              <div class="skills__skill">Azure Cloud</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-      </div>
-      <div class="quad quad--featured" id="projects">
-        <h2 class="quad__heading">Featured Project</h2>
+      </aside>
+      <main class="split-right" id="projects">
+        <h2 class="split-right__heading">Featured Project</h2>
         <div class="projects__row projects__row--featured">
             <div class="projects__row-img-cont">
               <img
@@ -422,9 +342,7 @@
               >
             </div>
           </div>
-      </div>
-      <div class="quad quad--archive" id="archive">
-        <h2 class="quad__heading">Data Analytics Case Studies</h2>
+        <h2 class="split-right__heading split-right__heading--mt">Earlier Work</h2>
         <details class="projects-archive">
             <summary class="projects-archive__summary">
               <span class="projects-archive__folder">&#128193;</span>
@@ -534,7 +452,7 @@
           </div>
             </div>
           </details>
-      </div>
+      </main>
     </div>
     <section id="contact" class="contact sec-pad dynamicBg">
       <div class="main-container">
